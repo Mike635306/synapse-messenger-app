@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MESSAGES</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/index.js" defer type="module"></script>
+</head>
+<body>
+
+
+    <div id="root">
+         <div id="app">
+            <aside id="left-bar">
+                <div>
+                    <h2> Messages </h2>
+                </div>
+                <div>
+                    <input placeholder="Search" type="text" id="search">
+                </div>
+                <div id="contacts">
+                    <ul>
+                        <li> <img src="./assets/Woman005.png" width="40px"  alt="">  <span>Eyecoded Support</span>   </li>
+                    </ul>
+                </div>
+            </aside>
+             <div id="audio-msg-notif">
+              <div class="spinner">
+                  <span class="spinner-part-0"></span>
+                  <span class="spinner-part-1"></span>
+                  <span class="spinner-part-2"></span>
+                  <span class="spinner-part-3"></span>
+                  <span class="spinner-part-0"></span>
+                  <span class="spinner-part-1"></span>
+                  <span class="spinner-part-2"></span>
+                  <span class="spinner-part-3"></span>
+              </div>
+                 <img src="./assets/x.svg" alt="">
+             </div>
+             <div id="plys-msg-notif"></div>
+                <aside class="right-bar-overlay">
+                    <div class="right-bar">
+                    <h2>Contacts</h2>
+                     <ul id="lifg">
+                     <li><img src="./assets/Woman005.png" width="40px"  alt=""><span>Eyecoded Support</span></li>
+                     </ul>
+                    
+                 <div class="my-loader">
+                 <div class="rubiks-cube">
+                 <div class="face front">
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678)" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: black;" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678)" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+    </div>
+
+    <div class="face back">
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: black;" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+    </div>
+    <div class="face left">
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: black;" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+    </div>
+    <div class="face right">
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: black;" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+    </div>
+    <div class="face top">
+      <div style="background: rgba(50, 252, 0, 0.678)" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: black;" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+    </div>
+    <div class="face bottom">
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background: black;" class="cube"></div>
+      <div style="background:rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background:rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background:rgba(50, 252, 0, 0.678);" class="cube"></div>
+      <div style="background:rgba(50, 252, 0, 0.678);" class="cube"></div>
+    </div>
+  </div>
+</div>
+                    </div>
+                </aside> 
+             
+            <main id="chat-display">
+       
+                <button id="mobile_menu">
+                <img src="./assets/drone (1).png" alt="">
+                </button>
+                <div id="chat-msg-dialog" ></div>
+                <div id="chat-display-message">
+                    <input id="message-input" placeholder=" your message.." type="text"> 
+                    <button id="plus-msg"><img src="./assets/plus (6).png" alt=""></button>
+                    <button id="audio-msg"><img src="./assets/mic.svg" alt=""></button>
+                    <button id="send-msg"><img src="./assets/send.svg" alt=""></button>
+                    
+                </div>                                                                                                                                       
+            </main>                                                                                                                               
+         </div>                                                                                                                                            
+
+    </div>
+
+
+</body>
+</html>
+
+
+
